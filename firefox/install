@@ -1,0 +1,8 @@
+#!/bin/bash -eu
+# ${1} -> profile
+
+pushd ./user.js
+
+./updater.sh -o ../user-overrides.js
+
+cp -v user.js "${HOME}/.mozilla/firefox/${1}/"
