@@ -1,0 +1,15 @@
+[Unit]
+Description = SSH Tunnel Service
+After       = network-online.target
+Wants       = network-online.target
+
+[Service]
+Restart         = always
+RestartSec      = 5
+EnvironmentFile = %h/.ssh/tunnel/%i
+ExecStart       = /usr/local/bin/ssh-tunnel
+ExecStartPre    = /usr/local/bin/ssh-tunnel pre
+ExecStop        = /usr/local/bin/ssh-tunnel post
+
+[Install]
+WantedBy = default.target
