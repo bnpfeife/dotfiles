@@ -31,4 +31,6 @@ exec ssh \
   -N `# no stdin` \
   -T `# no psuedo-terminal` \
   -n `# no remote command` \
+  -o ServerAliveCountMax=3  `# number of server queries` \
+  -o ServerAliveInterval=10 `# seconds between server queries` \
   ${SSH_OPTIONS[@]} -L ${LOCAL_ADDR}:${LOCAL_PORT}:${REMOTE_ADDR}:${REMOTE_PORT} ${REMOTE_USER}@${REMOTE_HOST}

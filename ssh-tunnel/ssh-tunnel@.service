@@ -5,7 +5,7 @@ Wants       = network-online.target
 
 [Service]
 Restart         = always
-RestartSec      = 5
+RestartSec      = 15
 EnvironmentFile = %h/.ssh/tunnel/%i
 ExecStart       = /usr/local/bin/ssh-tunnel
 ExecStartPre    = /usr/local/bin/ssh-tunnel pre
