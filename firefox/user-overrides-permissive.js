@@ -1,7 +1,13 @@
 // theming
 user_pref("browser.tabs.drawInTitlebar", true);
 // fingerprinting
-user_pref("dom.webaudio.enabled", false);
+user_pref("privacy.resistFingerprinting", false);
+// webgl
+user_pref("webgl.disable-fail-if-major-performance-caveat", false);
+user_pref("webgl.disabled", false);
+user_pref("webgl.enable-webgl2", true);
+user_pref("webgl.force-enabled", true);
+user_pref("webgl.min_capability_mode", false);
 // picture-in-picture
 user_pref("extensions.pictureinpicture.enable_picture_in_picture_overrides", true);
 user_pref("media.videocontrols.picture-in-picture.video-toggle.enabled", false);
